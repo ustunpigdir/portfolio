@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Partial Quantum Search LLM Evaluation — a controlled STEM benchmark testing whether LLMs reproduce formulas while failing the underlying quantum query-cost model." />
+  <meta name="author" content="Ustunpasa Igdir" />
+  <meta property="og:title" content="Partial Quantum Search LLM Evaluation" />
+  <meta property="og:description" content="A controlled LLM evaluation project for quantum-computation reasoning and query-cost failure modes." />
+  <meta property="og:type" content="article" />
+  <title>Partial Quantum Search LLM Evaluation — Ustunpasa Igdir</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="../">← Ustunpasa Igdir</a>
+      <nav aria-label="Project navigation">
+        <a href="#summary">Summary</a>
+        <a href="#findings">Findings</a>
+        <a href="#taxonomy">Taxonomy</a>
+        <a href="#files">Files</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Published case study · STEM LLM evaluation</p>
+          <h1>Partial Quantum Search LLM Evaluation</h1>
+          <p class="lead">
+            A controlled benchmark testing whether language models can apply partial quantum search formulas under
+            the correct quantum query-cost model.
+          </p>
+
+          <div class="actions">
+            <a class="button primary" href="report.pdf">Read report PDF</a>
+            <a class="button secondary" href="report.md">View Markdown report</a>
+            <a class="button secondary" href="evidence-log.md">Evidence log</a>
+          </div>
+        </div>
+
+        <aside class="summary-card" aria-label="Project metrics">
+          <p class="card-title">Run summary</p>
+          <dl class="metrics">
+            <div><dt>Total runs</dt><dd>120</dd></div>
+            <div><dt>Successful outputs</dt><dd>112</dd></div>
+            <div><dt>Reviewed failures</dt><dd>58</dd></div>
+            <div><dt>Critical failures</dt><dd>19</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="summary">
+      <div class="wrap two-col">
+        <div>
+          <p class="eyebrow">Core question</p>
+          <h2>Can a model know the formula but fail the cost model?</h2>
+        </div>
+        <div class="body-copy">
+          <p>
+            The evaluation focuses on partial quantum search, where the mathematical formulas are short but the
+            interpretation is fragile. A correct answer requires distinguishing global Grover iterations, local
+            Grover iterations, parallel query depth, the standard Grover baseline, and the net saved-query count.
+          </p>
+          <p>
+            The main finding is that models often reproduced formulas or intermediate values correctly while still
+            failing the operational query-complexity interpretation.
+          </p>
+          <blockquote>
+            LLMs may reproduce the correct formulas while still failing the underlying cost model.
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="gold">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Gold answer</p>
+          <h2>Base-case expected result</h2>
+          <p>
+            For \(N=10^6\), \(K=100\), and \(b=N/K=10,000\), the correct query accounting is:
+          </p>
+        </div>
+
+        <div class="gold-grid">
+          <article><span>Block size</span><strong>10,000</strong></article>
+          <article><span>Global queries</span><strong>698.80</strong></article>
+          <article><span>Local queries</span><strong>52.36</strong></article>
+          <article><span>Total queries</span><strong>751.16</strong></article>
+          <article><span>Standard Grover</span><strong>785.40</strong></article>
+          <article><span>Queries saved</span><strong>34.24</strong></article>
+        </div>
+
+        <p class="note">
+          The local-stage cost is not multiplied by \(K\) because the local searches are performed in parallel.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="findings">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Findings</p>
+          <h2>Observed failure patterns</h2>
+        </div>
+
+        <div class="finding-grid">
+          <article>
+            <h3>Formula recall is not enough</h3>
+            <p>Several responses used the correct formulas but still reached an incorrect query-saving conclusion.</p>
+          </article>
+          <article>
+            <h3>Parallel cost was often treated as sequential</h3>
+            <p>The most damaging base-case error was multiplying the local search cost by \(K=100\).</p>
+          </article>
+          <article>
+            <h3>Small correction terms were dropped</h3>
+            <p>Scale variants exposed models that rounded away correction terms decisive for the saved-query count.</p>
+          </article>
+          <article>
+            <h3>Some models changed the baseline</h3>
+            <p>When a result looked inconsistent, some models invented unsupported comparison baselines.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="taxonomy">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Failure taxonomy</p>
+          <h2>Critical labels used in review</h2>
+        </div>
+
+        <div class="taxonomy-table" role="table" aria-label="Failure taxonomy">
+          <div class="row head" role="row">
+            <div role="columnheader">Label</div>
+            <div role="columnheader">Meaning</div>
+          </div>
+          <div class="row" role="row">
+            <div><code>C_FALSE_SAVING_CLAIM</code></div>
+            <div>Wrong final conclusion about whether queries are saved.</div>
+          </div>
+          <div class="row" role="row">
+            <div><code>C_PARALLEL_AS_SEQUENTIAL</code></div>
+            <div>Treats parallel local search as sequential work by multiplying by \(K\).</div>
+          </div>
+          <div class="row" role="row">
+            <div><code>C_CORRECTION_TERM_DROPPED</code></div>
+            <div>Rounds away a correction term that determines the final saved-query count.</div>
+          </div>
+          <div class="row" role="row">
+            <div><code>C_WRONG_GROVER_BASELINE</code></div>
+            <div>Compares against the wrong standard Grover-search baseline.</div>
+          </div>
+          <div class="row" role="row">
+            <div><code>E_EXTRACTION_MISS</code></div>
+            <div>Evaluator/parser missed a value that appeared in the model response.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="files">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Project files</p>
+          <h2>Report and evidence</h2>
+          <p>The PDF is the public report. The evidence log is retained as the technical review layer.</p>
+        </div>
+
+        <div class="file-grid">
+          <a class="file-card" href="report.pdf">
+            <span>PDF</span>
+            <strong>Final public report</strong>
+            <small>Polished portfolio report</small>
+          </a>
+          <a class="file-card" href="report.md">
+            <span>MD</span>
+            <strong>Markdown report</strong>
+            <small>GitHub-readable version</small>
+          </a>
+          <a class="file-card" href="evidence-log.md">
+            <span>LOG</span>
+            <strong>Cleaned failure log</strong>
+            <small>Human-reviewed evidence layer</small>
+          </a>
+          <a class="file-card" href="../">
+            <span>HOME</span>
+            <strong>Back to portfolio</strong>
+            <small>Return to ustunpasaigdir.com</small>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 Ustunpasa Igdir</p>
+      <a href="../">Back to portfolio</a>
+    </div>
+  </footer>
+</body>
+</html>
