@@ -695,3 +695,114 @@ dd {
     gap: 2px;
   }
 }
+
+
+/* Professional link banners */
+.social-section {
+  padding-top: 0;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.social-card {
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  text-decoration: none;
+  box-shadow: 0 14px 36px rgba(0,0,0,.045);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 46px rgba(0,0,0,.08);
+  border-color: rgba(135,90,54,.36);
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 900;
+  letter-spacing: -.03em;
+  flex: 0 0 auto;
+}
+
+.social-card strong {
+  display: block;
+  font-size: 1.05rem;
+  letter-spacing: -.02em;
+  margin-bottom: 2px;
+}
+
+.social-card small {
+  display: block;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.social-card--linkedin .social-icon {
+  background: #e6eef8;
+  color: #174c80;
+}
+
+.social-card--email .social-icon {
+  background: #efe4d7;
+  color: #7c4d2c;
+}
+
+.social-card--github .social-icon {
+  background: #e9e9e9;
+  color: #1b1b1b;
+}
+
+.social-card--whatsapp .social-icon {
+  background: #dff2e5;
+  color: #1f7a3b;
+}
+
+.social-card--huggingface .social-icon {
+  background: #fff0c6;
+  color: #7a5600;
+}
+
+.social-card--proz .social-icon {
+  background: #e8f0f0;
+  color: #345b5f;
+}
+
+.social-card--disabled {
+  opacity: .72;
+  cursor: not-allowed;
+}
+
+.social-card--disabled:hover {
+  transform: none;
+  box-shadow: 0 14px 36px rgba(0,0,0,.045);
+  border-color: var(--line);
+}
+
+@media (max-width: 920px) {
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+}
