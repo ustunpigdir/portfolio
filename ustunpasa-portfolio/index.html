@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ustunpasa Igdir — physics-trained LLM evaluator. Controlled benchmarks, gold-answer rubrics, failure-mode taxonomies, and human-review workflows for scientific and multilingual model evaluation." />
+  <meta name="author" content="Ustunpasa Igdir" />
+  <title>Ustunpasa Igdir — LLM Evaluation &amp; Benchmark Design</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#hero">Skip to content</a>
+
+  <!-- 1. NAVIGATION -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#hero">
+        <span class="nav__mark" aria-hidden="true">UI</span>
+        <span class="nav__brandtext">Ustunpasa Igdir</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#method">Method</a>
+        <a href="#taxonomy">Taxonomy</a>
+        <a href="#services">Services</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn--ghost nav__github" href="https://github.com/" target="_blank" rel="noopener noreferrer">View GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO -->
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__main">
+          <p class="section-label">LLM evaluation · Benchmark design</p>
+          <h1 class="hero__title">
+            LLM evaluation for scientific reasoning, multilingual data, and failure-mode analysis.
+          </h1>
+          <p class="hero__sub">
+            I build controlled benchmarks, gold-answer rubrics, error taxonomies, and human-review
+            workflows for testing how language models reason, fail, recover, and follow
+            domain-specific instructions.
+          </p>
+
+          <div class="hero__name">
+            <p class="hero__name-line">Ustunpasa Igdir</p>
+            <p class="hero__name-meta">Physics-trained evaluator · Turkish / English / Spanish · Spain-based</p>
+          </div>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#work">View featured case study</a>
+            <a class="btn btn--ghost" href="#contact">Contact</a>
+          </div>
+
+          <ul class="hero__bullets">
+            <li>Physics background</li>
+            <li>Quantum-circuit senior project on IBM Q</li>
+            <li>LLM annotation and evaluation experience</li>
+            <li>Trilingual evaluation: Turkish, English, Spanish</li>
+          </ul>
+        </div>
+
+        <aside class="hero__panel" aria-label="Current focus">
+          <div class="panel__head">
+            <p class="section-label">Current focus</p>
+            <span class="badge badge--progress">In progress</span>
+          </div>
+          <h2 class="panel__title">Controlled LLM benchmark for partial quantum search reasoning</h2>
+          <p class="panel__meta">8 models · 5 scenarios · 3 trials · taxonomy-v2 human review</p>
+          <div class="panel__status">
+            <span class="dot" aria-hidden="true"></span>
+            Clean release being prepared
+          </div>
+          <dl class="panel__stats">
+            <div><dt>Models</dt><dd>8</dd></div>
+            <div><dt>Scenarios</dt><dd>5</dd></div>
+            <div><dt>Trials</dt><dd>3</dd></div>
+            <div><dt>Taxonomy</dt><dd>v2</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 3. CREDIBILITY STRIP -->
+    <section class="strip" aria-label="At a glance">
+      <div class="container strip__grid">
+        <div class="strip__item">
+          <p class="strip__label">Domain</p>
+          <p class="strip__value">Physics / quantum reasoning</p>
+        </div>
+        <div class="strip__item">
+          <p class="strip__label">Languages</p>
+          <p class="strip__value">Turkish · English · Spanish</p>
+        </div>
+        <div class="strip__item">
+          <p class="strip__label">Evaluation style</p>
+          <p class="strip__value">Gold answers · rubrics · error labels</p>
+        </div>
+        <div class="strip__item">
+          <p class="strip__label">Outputs</p>
+          <p class="strip__value">CSV · JSON · Markdown · Excel · GitHub/HF</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURED CASE STUDY -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Featured case study</p>
+          <h2 class="section__title">Controlled LLM Benchmark for Partial Quantum Search Reasoning</h2>
+          <span class="badge badge--status">Clean release run in preparation</span>
+        </div>
+
+        <p class="section__lead">
+          A local evaluation pipeline for testing whether language models can follow controlled
+          quantum-search assumptions, preserve formulas, update downstream calculations, and expose
+          interpretable failure modes.
+        </p>
+
+        <div class="case">
+          <div class="case__block">
+            <h3 class="case__h">Problem</h3>
+            <p>
+              LLM answers can appear mathematically fluent while violating a hidden assumption,
+              changing a counting convention, dropping a correction term, or using the wrong baseline.
+              The benchmark is designed to expose these specific failure modes.
+            </p>
+          </div>
+
+          <div class="case__block">
+            <h3 class="case__h">Benchmark scenarios</h3>
+            <div class="grid grid--cards">
+              <article class="card card--mono">
+                <p class="card__id">PQS_BASE_001</p>
+                <p class="card__text">Baseline partial quantum search calculation</p>
+              </article>
+              <article class="card card--mono">
+                <p class="card__id">PQS_VAR_SEQ_001</p>
+                <p class="card__text">Sequential vs parallel local-search cost</p>
+              </article>
+              <article class="card card--mono">
+                <p class="card__id">PQS_CONSISTENCY_001</p>
+                <p class="card__text">Inconsistent equal-block assumption</p>
+              </article>
+              <article class="card card--mono">
+                <p class="card__id">PQS_SCALE_001</p>
+                <p class="card__text">Astronomical scale and correction-term preservation</p>
+              </article>
+              <article class="card card--mono">
+                <p class="card__id">PQS_COUNT_001</p>
+                <p class="card__text">Changed final-inversion counting convention</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="case__block">
+            <h3 class="case__h">Evaluation pipeline</h3>
+            <p class="flow-line">
+              <span>Question</span> <span class="arrow" aria-hidden="true">→</span>
+              <span>Model response</span> <span class="arrow" aria-hidden="true">→</span>
+              <span>Deterministic numeric check</span> <span class="arrow" aria-hidden="true">→</span>
+              <span>Sonnet-assisted autograding</span> <span class="arrow" aria-hidden="true">→</span>
+              <span>taxonomy-v2 labels</span> <span class="arrow" aria-hidden="true">→</span>
+              <span>Human review</span> <span class="arrow" aria-hidden="true">→</span>
+              <span>Failure analysis export</span>
+            </p>
+          </div>
+
+          <div class="case__block">
+            <h3 class="case__h">Why it matters</h3>
+            <p>
+              The project does not try to prove which model is universally best. It identifies
+              repeatable reasoning failure modes under controlled variations of the same mathematical
+              structure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. RESEARCH SOURCE & GOLD-ANSWER VERIFICATION -->
+    <section class="section" id="source">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Provenance</p>
+          <h2 class="section__title">Research Source and Gold-Answer Verification</h2>
+        </div>
+
+        <p class="section__lead">
+          The benchmark scenarios are derived from a published discussion of partial quantum search
+          and Grover-style query counting. The original research source was used to identify the
+          mathematical structure of the problem: global Grover iterations, local block searches,
+          final inversion conventions, and query savings relative to standard Grover search.
+        </p>
+
+        <div class="source__grid">
+          <article class="card card--cite">
+            <div class="card__taxhead">
+              <h3 class="card__h">Primary research source</h3>
+              <span class="badge badge--soon">Placeholder</span>
+            </div>
+            <p class="cite__ref">
+              V. E. Korepin, “Partial Quantum Search of a Database,” arXiv:quant-ph/0504157.
+            </p>
+            <a class="cite__link" href="https://arxiv.org/abs/quant-ph/0504157" target="_blank" rel="noopener noreferrer">
+              arxiv.org/abs/quant-ph/0504157
+            </a>
+          </article>
+
+          <div class="callout source__note">
+            <p class="callout__label">Note</p>
+            <p>
+              The benchmark questions are not copied from the paper. They are controlled scenario
+              variants created from the paper’s mathematical setup to test specific LLM failure modes:
+              parallel-vs-sequential local search, changed counting conventions, inconsistent block
+              assumptions, scientific-notation scaling, and correction-term preservation.
+            </p>
+          </div>
+        </div>
+
+        <div class="source__sub">
+          <h3 class="case__h">Gold-answer verification</h3>
+          <p class="section__lead">
+            Gold answers were computed and checked independently using Python-based scientific
+            calculation tools, including symbolic and numerical libraries such as SymPy, NumPy, SciPy,
+            and mpmath where appropriate. The core numerical answers were also manually verified step
+            by step before being used as answer keys.
+          </p>
+
+          <p class="flow-line flow-line--verify">
+            <span>Research source</span> <span class="arrow" aria-hidden="true">→</span>
+            <span>Scenario design</span> <span class="arrow" aria-hidden="true">→</span>
+            <span>Python calculation</span> <span class="arrow" aria-hidden="true">→</span>
+            <span>Manual verification</span> <span class="arrow" aria-hidden="true">→</span>
+            <span>Gold answer</span> <span class="arrow" aria-hidden="true">→</span>
+            <span>Model evaluation</span>
+          </p>
+
+          <div class="callout callout--note source__transparency">
+            <p class="callout__label">Transparency</p>
+            <p>
+              This workflow separates source citation, scenario construction, numeric answer-key
+              generation, and final human annotation. The goal is to make the benchmark reproducible
+              and auditable rather than relying on unverified model-generated answer keys.
+            </p>
+          </div>
+        </div>
+
+        <article class="card card--repro">
+          <h3 class="card__h">Reproducibility note</h3>
+          <ul class="checklist">
+            <li>Original mathematical setup is cited.</li>
+            <li>Scenario variants are documented separately.</li>
+            <li>Gold numeric values are stored as expected-value fields.</li>
+            <li>Tolerance mode is specified for each question.</li>
+            <li>Python verification is used for calculation checks.</li>
+            <li>Final labels are human-reviewed.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. ARCHITECTURE -->
+    <section class="section section--alt" id="architecture">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">System</p>
+          <h2 class="section__title">Benchmark system architecture</h2>
+        </div>
+
+        <div class="arch">
+          <div class="arch__flow">
+            <div class="arch__box">
+              <p class="arch__name">Scenario Builder</p>
+              <p class="arch__desc">Defines controlled prompts, variants, and gold numeric answers.</p>
+            </div>
+            <div class="arch__arrow" aria-hidden="true">↓</div>
+            <div class="arch__box">
+              <p class="arch__name">Model Runner</p>
+              <p class="arch__desc">Sends identical prompts to each model at fixed temperature and trial count.</p>
+            </div>
+            <div class="arch__arrow" aria-hidden="true">↓</div>
+            <div class="arch__box">
+              <p class="arch__name">Deterministic Numeric Checker</p>
+              <p class="arch__desc">Extracts and compares numeric results against the gold key within tolerance.</p>
+            </div>
+            <div class="arch__arrow" aria-hidden="true">↓</div>
+            <div class="arch__box">
+              <p class="arch__name">Claude Sonnet Autograder</p>
+              <p class="arch__desc">Provides advisory labels and rationale for concept and response quality.</p>
+            </div>
+            <div class="arch__arrow" aria-hidden="true">↓</div>
+            <div class="arch__box">
+              <p class="arch__name">Human Review Queue</p>
+              <p class="arch__desc">A reviewer confirms or overrides labels; human review is final.</p>
+            </div>
+            <div class="arch__arrow" aria-hidden="true">↓</div>
+            <div class="arch__box">
+              <p class="arch__name">Failure Analysis Dashboard</p>
+              <p class="arch__desc">Aggregates pass rates, failure types, and representative cases.</p>
+            </div>
+            <div class="arch__arrow" aria-hidden="true">↓</div>
+            <div class="arch__box">
+              <p class="arch__name">GitHub / Hugging Face Export</p>
+              <p class="arch__desc">Packages clean data, dataset cards, and reports for publication.</p>
+            </div>
+          </div>
+
+          <aside class="arch__side">
+            <p class="section-label">Design principles</p>
+            <ul class="checklist">
+              <li>Closed-book prompts for the clean English run</li>
+              <li>Same system prompt across models</li>
+              <li>Fixed temperature and trial count</li>
+              <li>Autograding is advisory, human review is final</li>
+              <li>Pipeline artifacts are separated from model failures</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. METHODOLOGY -->
+    <section class="section" id="method">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Approach</p>
+          <h2 class="section__title">Methodology</h2>
+        </div>
+        <p class="section__lead">
+          The pipeline is designed around interpretability of failures, not just aggregate scores.
+        </p>
+
+        <div class="grid grid--cards">
+          <article class="card card--method">
+            <h3 class="card__h">Controlled prompt variants</h3>
+            <p>Each scenario shares the same mathematical structure but changes one assumption,
+              baseline, or convention. This isolates which variation a model actually mishandles
+              instead of blending many effects together.</p>
+          </article>
+          <article class="card card--method">
+            <h3 class="card__h">Gold numeric answer keys</h3>
+            <p>Every scenario has a precomputed reference value with an explicit tolerance. Numeric
+              checks are deterministic, so a model's arithmetic can be judged independently of its
+              wording.</p>
+          </article>
+          <article class="card card--method">
+            <h3 class="card__h">Required-concept checklist</h3>
+            <p>A short checklist records which assumptions, formulas, and correction terms a correct
+              answer must contain. This separates conceptually valid reasoning from fluent text that
+              skips a step.</p>
+          </article>
+          <article class="card card--method">
+            <h3 class="card__h">Grouped error taxonomy</h3>
+            <p>Failures are tagged with a structured, grouped taxonomy rather than a flat label list,
+              so conceptual, numeric, response-quality, and pipeline issues stay distinct and
+              countable.</p>
+          </article>
+          <article class="card card--method">
+            <h3 class="card__h">Autograding + human review</h3>
+            <p>An autograder proposes labels and rationale to speed up triage, but a human reviewer
+              makes the final call. Disagreements between automated and human labels are tracked.</p>
+          </article>
+          <article class="card card--method">
+            <h3 class="card__h">Failure-analysis exports</h3>
+            <p>Results are exported as structured tables and representative cases. The goal is reusable
+              evidence: failures that can be inspected, counted, and reproduced by others.</p>
+          </article>
+          <article class="card card--method">
+            <h3 class="card__h">Source-grounded scenario design</h3>
+            <p>The benchmark starts from a cited research source rather than arbitrary synthetic
+              prompts. I use the source to identify the mathematical structure, then create controlled
+              scenario variants that stress-test specific reasoning behaviors. Each variant is
+              documented with its own gold answer, expected numeric values, tolerance settings, and
+              required-concept checklist.</p>
+          </article>
+        </div>
+
+        <blockquote class="pullquote">
+          A wrong answer is only useful if the failure mode is specific enough to inspect, count, and
+          reproduce.
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 7. TAXONOMY -->
+    <section class="section section--alt" id="taxonomy">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Labeling system</p>
+          <h2 class="section__title">Taxonomy v2: separating reasoning failures from numeric errors and pipeline artifacts</h2>
+        </div>
+        <p class="section__lead">
+          The project moved from a flat error-label list to a grouped taxonomy after pilot runs
+          revealed that formula mistakes, rounding errors, incomplete responses, and extractor
+          artifacts should not be treated as the same type of failure.
+        </p>
+
+        <div class="grid grid--tax">
+          <article class="card card--tax">
+            <div class="card__taxhead">
+              <h3 class="card__h">Conceptual labels</h3>
+              <span class="prefix prefix--c">C_</span>
+            </div>
+            <ul class="chips">
+              <li class="chip">C_PARALLEL_AS_SEQUENTIAL</li>
+              <li class="chip">C_WRONG_GROVER_BASELINE</li>
+              <li class="chip">C_CORRECTION_TERM_DROPPED</li>
+              <li class="chip">C_FALSE_SAVING_CLAIM</li>
+            </ul>
+            <p class="card__text">Core reasoning or assumption failures that usually determine whether
+              the answer is conceptually invalid.</p>
+          </article>
+
+          <article class="card card--tax">
+            <div class="card__taxhead">
+              <h3 class="card__h">Numeric labels</h3>
+              <span class="prefix prefix--n">N_</span>
+            </div>
+            <ul class="chips">
+              <li class="chip">N_TOTAL_VALUE_ERROR</li>
+              <li class="chip">N_SAVED_VALUE_ERROR</li>
+              <li class="chip">N_PRECISION_INSUFFICIENT</li>
+              <li class="chip">N_SCIENTIFIC_NOTATION_ERROR</li>
+            </ul>
+            <p class="card__text">Calculation, tolerance, rounding, or scientific-notation errors.</p>
+          </article>
+
+          <article class="card card--tax">
+            <div class="card__taxhead">
+              <h3 class="card__h">Response-quality labels</h3>
+              <span class="prefix prefix--r">R_</span>
+            </div>
+            <ul class="chips">
+              <li class="chip">R_INCOMPLETE_RESPONSE</li>
+              <li class="chip">R_CONTRADICTORY_RESPONSE</li>
+              <li class="chip">R_EMPTY_RESPONSE</li>
+              <li class="chip">R_REPETITIVE_LOOP</li>
+            </ul>
+            <p class="card__text">Problems in answer form, completeness, consistency, or
+              responsiveness.</p>
+          </article>
+
+          <article class="card card--tax">
+            <div class="card__taxhead">
+              <h3 class="card__h">Artifact labels</h3>
+              <span class="prefix prefix--a">A_</span>
+            </div>
+            <ul class="chips">
+              <li class="chip">A_NUMERIC_EXTRACTION_ARTIFACT</li>
+              <li class="chip">A_DUPLICATE_EXPORT_ENTRY</li>
+              <li class="chip">A_RUN_METADATA_MISSING</li>
+            </ul>
+            <p class="card__text">Pipeline or review artifacts that should be separated from
+              model-performance statistics.</p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <p class="callout__label">Example</p>
+          <p>
+            If a model writes <code>10^80</code> but the numeric extractor reads <code>10</code>, the
+            case receives <code>A_NUMERIC_EXTRACTION_ARTIFACT</code> rather than being counted as a
+            model arithmetic error.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. RESULTS PREVIEW -->
+    <section class="section" id="results">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Status</p>
+          <h2 class="section__title">Results preview</h2>
+        </div>
+
+        <div class="callout callout--note">
+          <p>
+            The clean release run is being prepared after a pilot phase exposed
+            provider-configuration mistakes, label-schema issues, and numeric-extraction artifacts.
+            Public statistics will be based only on the clean release data.
+          </p>
+        </div>
+
+        <div class="grid grid--metrics">
+          <div class="metric">
+            <p class="metric__num">8</p>
+            <p class="metric__label">Models</p>
+          </div>
+          <div class="metric">
+            <p class="metric__num">5</p>
+            <p class="metric__label">Scenario variants</p>
+          </div>
+          <div class="metric">
+            <p class="metric__num">3</p>
+            <p class="metric__label">Trials per model-question pair</p>
+          </div>
+          <div class="metric">
+            <p class="metric__num">120</p>
+            <p class="metric__label">Clean release responses</p>
+          </div>
+        </div>
+
+        <div class="results__grid">
+          <div class="results__list">
+            <p class="section-label">Planned analysis outputs</p>
+            <ul class="checklist">
+              <li>Pass rate by model</li>
+              <li>Conceptual failure rate</li>
+              <li>Numeric-only failure rate</li>
+              <li>Critical-failure rate</li>
+              <li>Most common taxonomy labels</li>
+              <li>Representative failure cases</li>
+              <li>Model-by-scenario heatmap</li>
+            </ul>
+          </div>
+
+          <div class="results__charts">
+            <div class="chartph">
+              <span class="badge badge--soon">Pending</span>
+              <p class="chartph__title">Pass rate by model</p>
+              <p class="chartph__text">Chart placeholder — to be filled after clean release run</p>
+            </div>
+            <div class="chartph">
+              <span class="badge badge--soon">Pending</span>
+              <p class="chartph__title">Model-by-scenario heatmap</p>
+              <p class="chartph__text">Chart placeholder — to be filled after clean release run</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. SERVICES -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Services</p>
+          <h2 class="section__title">What I can build for LLM evaluation projects</h2>
+        </div>
+
+        <div class="grid grid--cards">
+          <article class="card card--service">
+            <h3 class="card__h">Benchmark design</h3>
+            <p>Design controlled prompts, perturbation variants, gold answers, and scoring criteria
+              for domain-specific model evaluation.</p>
+          </article>
+          <article class="card card--service">
+            <h3 class="card__h">Failure-mode taxonomy</h3>
+            <p>Create error labels that distinguish conceptual reasoning failures, numeric errors,
+              response-quality issues, and pipeline artifacts.</p>
+          </article>
+          <article class="card card--service">
+            <h3 class="card__h">Human evaluation workflow</h3>
+            <p>Build review queues, annotation rubrics, disagreement handling, and final
+              human-reviewed datasets.</p>
+          </article>
+          <article class="card card--service">
+            <h3 class="card__h">Scientific and technical QA</h3>
+            <p>Evaluate answers in physics, mathematics, scientific reasoning, and technical
+              explanation quality.</p>
+          </article>
+          <article class="card card--service">
+            <h3 class="card__h">Multilingual evaluation</h3>
+            <p>Develop Turkish-English-Spanish evaluation sets, translation-sensitive rubrics, and
+              terminology consistency checks.</p>
+          </article>
+          <article class="card card--service">
+            <h3 class="card__h">Dataset packaging</h3>
+            <p>Prepare CSV, JSONL, Markdown, Excel, GitHub README files, and Hugging Face dataset
+              cards.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. PROJECT TRACKS -->
+    <section class="section" id="tracks">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Portfolio</p>
+          <h2 class="section__title">Project tracks</h2>
+        </div>
+
+        <div class="grid grid--cards">
+          <article class="card card--track">
+            <div class="card__trackhead">
+              <h3 class="card__h">English closed-book benchmark</h3>
+              <span class="badge badge--active">Active</span>
+            </div>
+            <p>Controlled single-turn benchmark using partial quantum search scenarios.</p>
+          </article>
+          <article class="card card--track">
+            <div class="card__trackhead">
+              <h3 class="card__h">Follow-up / multi-turn benchmark</h3>
+              <span class="badge badge--planned">Planned</span>
+            </div>
+            <p>Tests whether models can update previous answers under corrected assumptions and
+              changed constraints.</p>
+          </article>
+          <article class="card card--track">
+            <div class="card__trackhead">
+              <h3 class="card__h">Turkish benchmark</h3>
+              <span class="badge badge--planned">Planned</span>
+            </div>
+            <p>Native Turkish version of the benchmark, focused on scientific terminology and
+              reasoning fidelity.</p>
+          </article>
+          <article class="card card--track">
+            <div class="card__trackhead">
+              <h3 class="card__h">Search-grounded comparison</h3>
+              <span class="badge badge--planned">Planned</span>
+            </div>
+            <p>Compares ordinary LLMs against search-grounded models such as Perplexity/Sonar in
+              Turkish scientific reasoning tasks.</p>
+          </article>
+          <article class="card card--track">
+            <div class="card__trackhead">
+              <h3 class="card__h">Local science-model experiment</h3>
+              <span class="badge badge--later">Later stage</span>
+            </div>
+            <p>Tests small Hugging Face science or physics-oriented models, with possible fine-tuning
+              on custom question-answer/error-label data.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. ROADMAP -->
+    <section class="section section--alt" id="roadmap">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Plan</p>
+          <h2 class="section__title">Roadmap</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <h3 class="timeline__h">Stage 1 — Clean English release</h3>
+            <p>8 models × 5 scenarios × 3 trials</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <h3 class="timeline__h">Stage 2 — Failure report and dataset card</h3>
+            <p>GitHub README, Hugging Face dataset card, representative failure cases</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <h3 class="timeline__h">Stage 3 — Multi-turn follow-up benchmark</h3>
+            <p>Assumption update, correction prompts, consistency tracking</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <h3 class="timeline__h">Stage 4 — Turkish scientific reasoning version</h3>
+            <p>Native Turkish prompts and terminology-sensitive labels</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <h3 class="timeline__h">Stage 5 — Search-grounded comparison</h3>
+            <p>Perplexity/Sonar and related retrieval-augmented systems</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <h3 class="timeline__h">Stage 6 — Local model experiments</h3>
+            <p>Llama 3.2 1B, physics-tuned 1B, SciReasoner-style models</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 12. ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Background</p>
+          <h2 class="section__title">About</h2>
+        </div>
+
+        <div class="about">
+          <div class="about__body">
+            <p>
+              I studied physics at Istanbul University and completed a senior project involving a
+              quantum circuit on IBM Q. My current work combines physics reasoning, multilingual
+              annotation, and LLM evaluation. I focus on building controlled datasets where model
+              failures can be inspected, labeled, and reused for benchmark reports or training data.
+            </p>
+          </div>
+          <dl class="about__facts">
+            <div>
+              <dt>Languages</dt>
+              <dd>Turkish, English, Spanish</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Spain</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>LLM evaluation, data annotation, scientific reasoning, multilingual benchmark design</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. LINKS -->
+    <section class="section section--alt" id="links">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Resources</p>
+          <h2 class="section__title">Links</h2>
+        </div>
+
+        <div class="grid grid--links">
+          <a class="linkcard" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <span class="linkcard__name">GitHub repository</span>
+            <span class="linkcard__meta">github.com</span>
+          </a>
+          <a class="linkcard" href="https://huggingface.co/" target="_blank" rel="noopener noreferrer">
+            <span class="linkcard__name">Hugging Face dataset</span>
+            <span class="linkcard__meta">huggingface.co</span>
+          </a>
+          <span class="linkcard linkcard--disabled" role="link" aria-disabled="true" tabindex="0">
+            <span class="linkcard__name">Clean release report</span>
+            <span class="badge badge--soon">Coming soon</span>
+          </span>
+          <span class="linkcard linkcard--disabled" role="link" aria-disabled="true" tabindex="0">
+            <span class="linkcard__name">Failure examples</span>
+            <span class="badge badge--soon">Coming soon</span>
+          </span>
+          <a class="linkcard" href="https://www.linkedin.com/in/ustunpasaigdir" target="_blank" rel="noopener noreferrer">
+            <span class="linkcard__name">LinkedIn</span>
+            <span class="linkcard__meta">linkedin.com</span>
+          </a>
+          <span class="linkcard linkcard--disabled" role="link" aria-disabled="true" tabindex="0">
+            <span class="linkcard__name">CV</span>
+            <span class="badge badge--soon">Coming soon</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <p class="section-label">Get in touch</p>
+          <h2 class="section__title">Contact</h2>
+        </div>
+
+        <div class="contact">
+          <div class="contact__cta">
+            <p class="contact__lead">Interested in a domain-specific benchmark or annotation workflow?</p>
+            <p>Send me a short description of the task, model type, language, and evaluation goal.</p>
+            <a class="btn btn--primary" href="mailto:guiaustunigdir@icloud.com">Email me</a>
+          </div>
+
+          <dl class="contact__details">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:guiaustunigdir@icloud.com">guiaustunigdir@icloud.com</a></dd>
+            </div>
+            <div>
+              <dt>LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/ustunpasaigdir" target="_blank" rel="noopener noreferrer">linkedin.com/in/ustunpasaigdir</a></dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Spain</dd>
+            </div>
+            <div>
+              <dt>Languages</dt>
+              <dd>Turkish · English · Spanish</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 15. FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2026 Ustunpasa Igdir</p>
+      <p class="footer__tag">LLM evaluation · Scientific reasoning · Multilingual annotation</p>
+      <a class="footer__top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
