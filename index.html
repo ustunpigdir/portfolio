@@ -2,416 +2,330 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ustunpasa Igdir — physics-trained LLM evaluator and multilingual benchmark designer. Portfolio of LLM evaluation projects, STEM reasoning QA, Turkish-English-Spanish annotation, and client work." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ustunpasa Igdir — physics-trained LLM evaluator specializing in scientific reasoning QA, multilingual evaluation, benchmark design, and failure-mode analysis." />
   <meta name="author" content="Ustunpasa Igdir" />
+  <meta property="og:title" content="Ustunpasa Igdir — LLM Evaluation Portfolio" />
+  <meta property="og:description" content="Scientific reasoning QA, multilingual evaluation, benchmark design, and failure-mode analysis." />
+  <meta property="og:type" content="website" />
   <title>Ustunpasa Igdir — LLM Evaluation Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Ustunpasa Igdir home">
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="#top" aria-label="Ustunpasa Igdir homepage">
         <span class="brand-mark">UI</span>
-        <span class="brand-text">
-          <strong>Ustunpasa Igdir</strong>
-          <small>LLM Evaluation · Scientific Reasoning · Multilingual QA</small>
-        </span>
+        <span class="brand-name">Ustunpasa Igdir</span>
       </a>
 
-      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="siteNav">
+      <button class="nav-toggle" id="navToggle" aria-controls="navMenu" aria-expanded="false">
         <span></span><span></span><span></span>
-        <span class="sr-only">Menu</span>
+        <span class="sr-only">Open navigation</span>
       </button>
 
-      <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
+      <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+        <a href="#work">Work</a>
         <a href="#clients">Clients</a>
         <a href="#method">Method</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a class="nav-pill" href="#contact">Contact</a>
+        <a class="nav-contact" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero section-pad">
-      <div class="container hero-grid">
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Physics-trained LLM evaluator · Turkish / English / Spanish</p>
-          <h1>Controlled benchmarks for scientific reasoning and multilingual model evaluation.</h1>
-          <p class="hero-lead">
-            I design evaluation tasks, gold-answer rubrics, failure-mode taxonomies, and human-review workflows
-            for testing how language models reason, fail, recover, and follow domain-specific instructions.
+          <p class="kicker">LLM evaluation · Scientific reasoning QA · Multilingual annotation</p>
+          <h1>Evaluation systems for models that need more than fluent answers.</h1>
+          <p class="lead">
+            I build controlled benchmarks, gold-answer rubrics, failure taxonomies, and human-review workflows
+            for testing how language models reason in scientific, technical, and multilingual settings.
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#projects">View projects</a>
-            <a class="button secondary" href="#contact">Work with me</a>
+            <a class="button primary" href="#work">Selected work</a>
+            <a class="button secondary" href="mailto:guiaustunigdir@icloud.com">Email me</a>
           </div>
-
-          <ul class="signal-list" aria-label="Core strengths">
-            <li>Physics and quantum-computation background</li>
-            <li>LLM annotation and evaluation experience</li>
-            <li>Trilingual evaluation: Turkish, English, Spanish</li>
-            <li>Gold-answer design, error labels, and QA review</li>
-          </ul>
         </div>
 
-        <aside class="hero-card" aria-label="Portfolio snapshot">
-          <p class="card-label">Portfolio snapshot</p>
-          <div class="stat-grid">
-            <div><strong>5</strong><span>Project tracks</span></div>
-            <div><strong>3</strong><span>Working languages</span></div>
-            <div><strong>120</strong><span>Runs in featured study</span></div>
-            <div><strong>19</strong><span>Critical failures reviewed</span></div>
-          </div>
-          <div class="hero-note">
-            <span class="status-dot"></span>
-            Featured report published: Partial Quantum Search LLM Evaluation
-          </div>
+        <aside class="profile-card" aria-label="Professional summary">
+          <dl>
+            <div>
+              <dt>Background</dt>
+              <dd>Physics · IBM Q senior project · LLM evaluation</dd>
+            </div>
+            <div>
+              <dt>Languages</dt>
+              <dd>Turkish · English · Spanish</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>STEM reasoning, error labels, data QA</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Spain</dd>
+            </div>
+          </dl>
         </aside>
       </div>
     </section>
 
-    <section class="trust-strip">
-      <div class="container strip-grid">
+    <section class="proof-strip" aria-label="Professional focus areas">
+      <div class="wrap proof-grid">
         <div>
-          <span>Domain</span>
-          <strong>Physics · Quantum reasoning · STEM QA</strong>
+          <span>01</span>
+          <strong>Gold-answer benchmark design</strong>
         </div>
         <div>
-          <span>Evaluation</span>
-          <strong>Rubrics · Taxonomies · Human review</strong>
+          <span>02</span>
+          <strong>Failure-mode taxonomy</strong>
         </div>
         <div>
-          <span>Data outputs</span>
-          <strong>CSV · JSONL · Markdown · Excel · GitHub</strong>
+          <span>03</span>
+          <strong>Human-reviewed model QA</strong>
         </div>
         <div>
-          <span>Languages</span>
-          <strong>Turkish · English · Spanish</strong>
+          <span>04</span>
+          <strong>Turkish / English / Spanish evaluation</strong>
         </div>
       </div>
     </section>
 
-    <section class="section-pad" id="projects">
-      <div class="container">
+    <section class="section" id="work">
+      <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Project portfolio</p>
-          <h2>Current and incoming projects</h2>
+          <p class="kicker">Selected work</p>
+          <h2>Project portfolio</h2>
           <p>
-            This site is designed to display more than one project. The carousel highlights the active published
-            case study plus four incoming project tracks.
+            A compact portfolio of published and incoming evaluation projects. The focus is evidence:
+            what was tested, what failed, and how the results were reviewed.
           </p>
         </div>
 
-        <div class="carousel" aria-label="Project carousel">
-          <div class="carousel-top">
-            <div>
-              <p class="carousel-kicker">Featured projects</p>
-              <h3 id="carouselTitle">Project carousel</h3>
+        <div class="featured-work">
+          <article class="featured-card">
+            <div class="card-meta">
+              <span class="status published">Published report</span>
+              <span>Quantum reasoning · Query-complexity QA</span>
             </div>
-            <div class="carousel-controls">
-              <button class="icon-button" id="prevProject" aria-label="Previous project">←</button>
-              <button class="icon-button" id="nextProject" aria-label="Next project">→</button>
-            </div>
-          </div>
-
-          <div class="carousel-track" id="projectTrack">
-            <article class="project-card featured">
-              <div class="project-meta">
-                <span class="badge live">Published</span>
-                <span>STEM reasoning</span>
-              </div>
-              <h4>Partial Quantum Search LLM Evaluation</h4>
-              <p>
-                A controlled benchmark testing whether LLMs can apply partial quantum search formulas under the
-                correct query-cost model. The study reviewed 112 successful outputs and identified 19 critical failures.
-              </p>
-              <ul>
-                <li>Gold-answer verification</li>
-                <li>Failure taxonomy</li>
-                <li>Human-reviewed evidence log</li>
-              </ul>
-              <div class="project-links">
-                <a href="partial-quantum-search-llm-evaluation/" class="text-link">Open project page</a>
-                <a href="partial-quantum-search-llm-evaluation/report.pdf" class="text-link">Read PDF</a>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">
-                <span class="badge incoming">Incoming</span>
-                <span>Multilingual evaluation</span>
-              </div>
-              <h4>Turkish Scientific Reasoning Benchmark</h4>
-              <p>
-                Native Turkish STEM prompts designed to test whether models preserve scientific meaning, notation,
-                and reasoning structure without relying on translated English patterns.
-              </p>
-              <ul>
-                <li>Turkish-first prompt design</li>
-                <li>Terminology consistency checks</li>
-                <li>Reasoning-label taxonomy</li>
-              </ul>
-              <div class="project-links">
-                <span class="muted-link">Case study coming soon</span>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">
-                <span class="badge incoming">Incoming</span>
-                <span>Dataset product</span>
-              </div>
-              <h4>Trilingual LLM Evaluation Data Packs</h4>
-              <p>
-                Turkish-English-Spanish data packs for testing model behavior on terminology, ambiguity, hallucination,
-                translation drift, and culturally sensitive language choices.
-              </p>
-              <ul>
-                <li>CSV / JSONL release format</li>
-                <li>Dataset cards</li>
-                <li>Label-ready examples</li>
-              </ul>
-              <div class="project-links">
-                <span class="muted-link">Dataset preview coming soon</span>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">
-                <span class="badge incoming">Incoming</span>
-                <span>Reasoning stress tests</span>
-              </div>
-              <h4>Physics and Math Hallucination Stress Tests</h4>
-              <p>
-                A controlled set of physics, logic, and math questions designed to reveal when models invent assumptions,
-                ignore constraints, or produce confident but invalid derivations.
-              </p>
-              <ul>
-                <li>Constraint-violation traps</li>
-                <li>Wrong-baseline detection</li>
-                <li>Follow-up correction tasks</li>
-              </ul>
-              <div class="project-links">
-                <span class="muted-link">Failure report coming soon</span>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-meta">
-                <span class="badge incoming">Incoming</span>
-                <span>Workflow tooling</span>
-              </div>
-              <h4>LLM Evaluation Pipeline Tool</h4>
-              <p>
-                A lightweight local workflow for running model comparisons, collecting outputs, exporting review tables,
-                and producing evidence logs for human QA.
-              </p>
-              <ul>
-                <li>Scenario management</li>
-                <li>Trial-count controls</li>
-                <li>Excel-ready exports</li>
-              </ul>
-              <div class="project-links">
-                <span class="muted-link">Tool demo coming soon</span>
-              </div>
-            </article>
-          </div>
-
-          <div class="carousel-dots" id="projectDots" aria-label="Project selector"></div>
-        </div>
-
-        <div class="project-grid" aria-label="All projects">
-          <article class="mini-project">
-            <span class="badge live">Published</span>
             <h3>Partial Quantum Search LLM Evaluation</h3>
-            <p>Formula-level correctness vs query-cost interpretation.</p>
+            <p>
+              A controlled STEM benchmark testing whether LLMs can apply partial quantum search formulas under the
+              correct cost model. The evaluation reviewed 112 successful outputs, 58 reviewed failures, and 19 critical failures.
+            </p>
+            <div class="result-line">
+              <div><strong>120</strong><span>total runs</span></div>
+              <div><strong>112</strong><span>successful outputs</span></div>
+              <div><strong>19</strong><span>critical failures</span></div>
+            </div>
+            <div class="link-row">
+              <a href="partial-quantum-search-llm-evaluation/" class="inline-link">Project page</a>
+              <a href="partial-quantum-search-llm-evaluation/report.pdf" class="inline-link">Report PDF</a>
+              <a href="partial-quantum-search-llm-evaluation/evidence-log.md" class="inline-link">Evidence log</a>
+            </div>
           </article>
-          <article class="mini-project">
-            <span class="badge incoming">Incoming</span>
-            <h3>Turkish Scientific Reasoning Benchmark</h3>
-            <p>Native Turkish STEM evaluation with terminology-sensitive labels.</p>
-          </article>
-          <article class="mini-project">
-            <span class="badge incoming">Incoming</span>
-            <h3>Trilingual Data Packs</h3>
-            <p>Turkish-English-Spanish evaluation examples for LLM behavior testing.</p>
-          </article>
-          <article class="mini-project">
-            <span class="badge incoming">Incoming</span>
-            <h3>Hallucination Stress Tests</h3>
-            <p>Physics and math prompts designed to reveal hidden reasoning failures.</p>
-          </article>
-          <article class="mini-project">
-            <span class="badge incoming">Incoming</span>
-            <h3>Evaluation Pipeline Tool</h3>
-            <p>A local workflow for model runs, annotation review, and export.</p>
-          </article>
+
+          <aside class="featured-note">
+            <p class="small-title">Core finding</p>
+            <p>
+              LLMs may reproduce the correct formulas while still failing the cost model. The benchmark separates
+              formula recall from operational query-complexity reasoning.
+            </p>
+          </aside>
+        </div>
+
+        <div class="carousel-shell" aria-label="Project carousel">
+          <div class="carousel-header">
+            <h3>Five-project pipeline</h3>
+            <div class="carousel-controls">
+              <button id="prevSlide" aria-label="Previous project">Previous</button>
+              <button id="nextSlide" aria-label="Next project">Next</button>
+            </div>
+          </div>
+
+          <div class="carousel-track" id="projectCarousel">
+            <article class="project-slide">
+              <span class="status published">Published</span>
+              <h4>Partial Quantum Search LLM Evaluation</h4>
+              <p>STEM reasoning benchmark with gold answers, failure taxonomy, and human-reviewed evidence.</p>
+            </article>
+            <article class="project-slide">
+              <span class="status planned">Incoming</span>
+              <h4>Turkish Scientific Reasoning Benchmark</h4>
+              <p>Native Turkish STEM evaluation for terminology, notation, and reasoning fidelity.</p>
+            </article>
+            <article class="project-slide">
+              <span class="status planned">Incoming</span>
+              <h4>Trilingual Evaluation Data Packs</h4>
+              <p>Turkish-English-Spanish examples for ambiguity, hallucination, translation drift, and domain terms.</p>
+            </article>
+            <article class="project-slide">
+              <span class="status planned">Incoming</span>
+              <h4>Physics & Math Hallucination Stress Tests</h4>
+              <p>Constraint-sensitive prompts that expose invented assumptions and invalid derivations.</p>
+            </article>
+            <article class="project-slide">
+              <span class="status planned">Incoming</span>
+              <h4>LLM Evaluation Pipeline Tool</h4>
+              <p>Local workflow for model runs, trial control, review exports, and evidence-log generation.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad section-muted" id="clients">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Clients and work contexts</p>
-          <h2>Evaluation and annotation experience</h2>
+    <section class="section muted" id="clients">
+      <div class="wrap">
+        <div class="section-head narrow">
+          <p class="kicker">Clients and work contexts</p>
+          <h2>Relevant evaluation and annotation work</h2>
           <p>
-            Public client names are shown only where appropriate. Private or platform-based work is described by task type.
+            Client names are included where appropriate. Private platform work is described by task type rather than exposing confidential details.
           </p>
         </div>
 
-        <div class="client-grid">
-          <article class="client-card">
-            <span class="client-type">Data annotation</span>
+        <div class="client-list">
+          <article>
+            <span>Data annotation</span>
             <h3>Datamundi</h3>
-            <p>Multilingual annotation and evaluation work involving quality control, linguistic judgment, and task-specific review.</p>
+            <p>Multilingual annotation and quality review involving linguistic judgment and task-specific evaluation.</p>
           </article>
-
-          <article class="client-card">
-            <span class="client-type">AI evaluation</span>
+          <article>
+            <span>AI evaluation</span>
             <h3>Mindrift</h3>
-            <p>Physics and natural-science evaluation context, including domain-specific model response review and reasoning checks.</p>
+            <p>Physics and natural-science model evaluation context, including domain-specific reasoning checks.</p>
           </article>
-
-          <article class="client-card">
-            <span class="client-type">Freelance profile</span>
-            <h3>ProZ / language services</h3>
-            <p>Professional positioning for Turkish-English-Spanish language work, technical review, and specialized terminology support.</p>
+          <article>
+            <span>Language services</span>
+            <h3>ProZ profile</h3>
+            <p>Professional Turkish-English-Spanish language work, terminology review, and technical communication.</p>
           </article>
-
-          <article class="client-card">
-            <span class="client-type">Private / platform work</span>
+          <article>
+            <span>Private / platform work</span>
             <h3>LLM annotation clients</h3>
-            <p>Human-review workflows for model outputs, including correctness checks, rubric labels, and failure-mode documentation.</p>
+            <p>Human-review workflows for correctness, rubric labels, response quality, and failure-mode documentation.</p>
           </article>
         </div>
-
-        <p class="client-note">
-          Client list can be expanded as more public case studies become available.
-        </p>
       </div>
     </section>
 
-    <section class="section-pad" id="method">
-      <div class="container method-grid">
-        <div class="section-head sticky-head">
-          <p class="eyebrow">Method</p>
-          <h2>How I evaluate model behavior</h2>
+    <section class="section" id="method">
+      <div class="wrap method-layout">
+        <div class="section-head sticky">
+          <p class="kicker">Method</p>
+          <h2>How the work is structured</h2>
           <p>
-            The method focuses on finding the exact point where a model’s answer stops being reliable.
+            The goal is not to collect isolated wrong answers. The goal is to identify repeatable failure mechanisms.
           </p>
         </div>
 
-        <div class="method-steps">
+        <div class="method-list">
           <article>
-            <span>01</span>
-            <h3>Controlled prompt design</h3>
-            <p>Prompts are built around one mathematical or linguistic structure, then varied by one constraint at a time.</p>
+            <span class="step">1</span>
+            <h3>Define the failure target</h3>
+            <p>Choose the exact behavior to test: baseline drift, correction-term loss, parallel-cost confusion, translation drift, or hallucination.</p>
           </article>
           <article>
-            <span>02</span>
-            <h3>Gold-answer verification</h3>
-            <p>Expected values and reasoning steps are checked before model outputs are evaluated.</p>
+            <span class="step">2</span>
+            <h3>Build controlled variants</h3>
+            <p>Keep the same structure while changing one assumption at a time. This makes the resulting failure interpretable.</p>
           </article>
           <article>
-            <span>03</span>
-            <h3>Error taxonomy</h3>
-            <p>Conceptual errors, numeric errors, response-quality issues, and extraction artifacts are separated.</p>
+            <span class="step">3</span>
+            <h3>Verify the gold answer</h3>
+            <p>Expected answers are checked before model responses are scored. Numeric values and required concepts are stored separately.</p>
           </article>
           <article>
-            <span>04</span>
-            <h3>Human review</h3>
-            <p>Automated checks can assist, but final labels require human inspection when reasoning quality matters.</p>
+            <span class="step">4</span>
+            <h3>Label model behavior</h3>
+            <p>Conceptual, numeric, response-quality, and extraction errors are separated so the analysis does not overclaim.</p>
           </article>
           <article>
-            <span>05</span>
-            <h3>Evidence packaging</h3>
-            <p>Reports, README files, cleaned failure logs, and dataset cards turn raw runs into reusable evaluation artifacts.</p>
+            <span class="step">5</span>
+            <h3>Package evidence</h3>
+            <p>Outputs are converted into reports, evidence logs, README files, and dataset-ready formats.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-pad section-dark" id="services">
-      <div class="container">
+    <section class="section dark" id="services">
+      <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Services</p>
-          <h2>What I can build</h2>
+          <p class="kicker">Services</p>
+          <h2>Evaluation work I can support</h2>
         </div>
 
-        <div class="service-grid">
+        <div class="services-grid">
           <article>
             <h3>Benchmark design</h3>
-            <p>Controlled prompts, variants, gold answers, and scoring criteria for domain-specific evaluation.</p>
+            <p>Controlled prompts, perturbation variants, answer keys, and scoring rubrics.</p>
           </article>
           <article>
-            <h3>Failure-mode taxonomy</h3>
-            <p>Error labels that separate conceptual failures from numeric mistakes and pipeline artifacts.</p>
+            <h3>STEM answer QA</h3>
+            <p>Physics, math, and technical reasoning review for model outputs.</p>
           </article>
           <article>
-            <h3>Scientific QA</h3>
-            <p>Physics, math, and technical reasoning review for LLM outputs.</p>
+            <h3>Failure taxonomy</h3>
+            <p>Error-label systems that separate conceptual failures, numeric mistakes, and artifact issues.</p>
           </article>
           <article>
             <h3>Multilingual evaluation</h3>
-            <p>Turkish-English-Spanish datasets, terminology checks, and translation-sensitive rubrics.</p>
+            <p>Turkish-English-Spanish review, terminology consistency, and translation-sensitive evaluation.</p>
           </article>
           <article>
             <h3>Human review workflows</h3>
-            <p>Annotation rubrics, review queues, disagreement handling, and final cleaned datasets.</p>
+            <p>Annotation guidelines, review queues, disagreement handling, and final cleaned outputs.</p>
           </article>
           <article>
             <h3>Dataset packaging</h3>
-            <p>CSV, JSONL, Markdown, Excel, GitHub README, and Hugging Face-ready documentation.</p>
+            <p>CSV, JSONL, Excel, Markdown, GitHub README, and report-ready deliverables.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-pad" id="about">
-      <div class="container about-grid">
+    <section class="section" id="about">
+      <div class="wrap about-layout">
         <div>
-          <p class="eyebrow">Background</p>
-          <h2>Physics-trained evaluator with multilingual annotation experience.</h2>
+          <p class="kicker">About</p>
+          <h2>Physics background, language expertise, and evaluation discipline.</h2>
         </div>
-        <div class="about-copy">
+        <div class="about-text">
           <p>
-            I studied physics at Istanbul University and completed a senior project involving a quantum circuit
-            on IBM Q. My current work combines physics reasoning, multilingual annotation, and LLM evaluation.
+            I studied physics at Istanbul University and completed a senior project involving a quantum circuit on IBM Q.
+            My current work combines scientific reasoning, multilingual annotation, and LLM evaluation.
           </p>
           <p>
-            I focus on controlled evaluation: tasks where model failures can be inspected, labeled, counted,
-            and reused for benchmark reports or training data.
+            I focus on controlled evidence: tasks where model failures can be inspected, labeled, counted, and turned into
+            useful benchmark reports or training data.
           </p>
-
-          <dl class="fact-list">
+          <dl class="facts">
             <div><dt>Languages</dt><dd>Turkish, English, Spanish</dd></div>
             <div><dt>Location</dt><dd>Spain</dd></div>
-            <div><dt>Focus</dt><dd>LLM evaluation, scientific reasoning, multilingual QA</dd></div>
+            <div><dt>Contact</dt><dd><a href="mailto:guiaustunigdir@icloud.com">guiaustunigdir@icloud.com</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/ustunpasaigdir" target="_blank" rel="noopener noreferrer">linkedin.com/in/ustunpasaigdir</a></dd></div>
           </dl>
         </div>
       </div>
     </section>
 
-    <section class="section-pad contact-section" id="contact">
-      <div class="container contact-card">
+    <section class="contact-panel" id="contact">
+      <div class="wrap contact-inner">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Need a benchmark, dataset, or human-review workflow?</h2>
-          <p>
-            Send a short description of the model, domain, language, and evaluation goal.
-          </p>
+          <p class="kicker">Contact</p>
+          <h2>Need a benchmark or evaluation workflow?</h2>
+          <p>Send the domain, model type, language, and what you need to measure.</p>
         </div>
-
-        <div class="contact-actions">
+        <div class="contact-buttons">
           <a class="button primary" href="mailto:guiaustunigdir@icloud.com">Email me</a>
           <a class="button secondary" href="https://www.linkedin.com/in/ustunpasaigdir" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
@@ -420,8 +334,9 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
+    <div class="wrap footer-wrap">
       <p>© 2026 Ustunpasa Igdir</p>
+      <p>LLM evaluation · Scientific reasoning · Multilingual QA</p>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>

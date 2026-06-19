@@ -1,6 +1,6 @@
-# Ustunpasa Igdir portfolio site redesign
+# Ustunpasa Igdir — Professional Portfolio Website
 
-This folder contains a replacement homepage for `ustunpasaigdir.com`.
+A cleaner, more professional redesign for `ustunpasaigdir.com`.
 
 ## Files
 
@@ -8,18 +8,21 @@ This folder contains a replacement homepage for `ustunpasaigdir.com`.
 - `styles.css`
 - `script.js`
 
-## What changed
+## Design direction
 
-- Broader portfolio structure instead of a single-project page
-- Project carousel with 5 project tracks
-- Client/work-context section
-- Services section
-- Method section
-- Cleaner homepage positioning
-- Mobile navigation and accessible carousel controls
+This version is intentionally quieter and more professional than the previous version:
+
+- direct hero positioning
+- selected work section
+- one featured report
+- five-project carousel
+- client/work-context section
+- method and services sections
+- fewer badges, less visual noise
+- better portfolio structure for multiple projects
 
 ## Upload
 
 Upload these three files to the root of the GitHub repository that powers `ustunpasaigdir.com`.
 
-Keep the existing `CNAME` file unchanged.
+Keep your existing `CNAME` file unchanged.
