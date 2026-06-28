@@ -3,15 +3,15 @@ const navMenu = document.getElementById("navMenu");
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
-    const isOpen = navMenu.classList.toggle("open");
+    const isOpen = navMenu.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  navMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("open");
+  navMenu.addEventListener("click", (event) => {
+    if (event.target instanceof HTMLAnchorElement) {
+      navMenu.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
-    });
+    }
   });
 }
 
@@ -20,18 +20,36 @@ const prevSlide = document.getElementById("prevSlide");
 const nextSlide = document.getElementById("nextSlide");
 
 if (carousel && prevSlide && nextSlide) {
-  const slide = carousel.querySelector(".project-slide");
-  const gap = 14;
+  const scrollBySlide = (direction) => {
+    const firstSlide = carousel.querySelector(".project-slide");
+    const gap = parseFloat(getComputedStyle(carousel).columnGap || "0");
+    const amount = firstSlide ? firstSlide.getBoundingClientRect().width + gap : 320;
+    carousel.scrollBy({ left: direction * amount, behavior: "smooth" });
+  };
 
-  function amount() {
-    return slide ? slide.getBoundingClientRect().width + gap : 320;
-  }
+  prevSlide.addEventListener("click", () => scrollBySlide(-1));
+  nextSlide.addEventListener("click", () => scrollBySlide(1));
+}
 
-  prevSlide.addEventListener("click", () => {
-    carousel.scrollBy({ left: -amount(), behavior: "smooth" });
-  });
+const summaryPanel = document.getElementById("summaryPanel");
+const stageButtons = document.querySelectorAll('.link-row [data-stage]');
 
-  nextSlide.addEventListener("click", () => {
-    carousel.scrollBy({ left: amount(), behavior: "smooth" });
+if (summaryPanel && stageButtons.length) {
+  const stages = summaryPanel.querySelectorAll(".summary-stage");
+  stageButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const wasActive = btn.getAttribute("aria-expanded") === "true";
+      stageButtons.forEach((b) => b.setAttribute("aria-expanded", "false"));
+      stages.forEach((s) => (s.hidden = true));
+      if (wasActive) {
+        summaryPanel.hidden = true;
+      } else {
+        btn.setAttribute("aria-expanded", "true");
+        summaryPanel.hidden = false;
+        stages.forEach((s) => {
+          if (s.dataset.stage === btn.dataset.stage) s.hidden = false;
+        });
+      }
+    });
   });
 }
