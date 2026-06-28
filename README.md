@@ -1,22 +1,28 @@
-# Partial Quantum Search LLM Evaluation Portfolio
+# Ustunpasa Igdir — Professional Portfolio Website
 
-Static portfolio site for Ustunpasa Igdir's LLM evaluation work, including the Stage 2 results page for the Partial Quantum Search robustness evaluation.
+A cleaner, more professional redesign for `ustunpasaigdir.com`.
 
-## Local Preview
+## Files
 
-Open `index.html` directly in a browser, or serve the folder with any static file server.
+- `index.html`
+- `styles.css`
+- `script.js`
 
-```bash
-cd portfolio-deploy
-python3 -m http.server 8000
-```
+## Design direction
 
-Then visit:
+This version is intentionally quieter and more professional than the previous version:
 
-```text
-http://localhost:8000/
-```
+- direct hero positioning
+- selected work section
+- one featured report
+- five-project carousel
+- client/work-context section
+- method and services sections
+- fewer badges, less visual noise
+- better portfolio structure for multiple projects
 
-## GitHub Pages
+## Upload
 
-This folder is ready to be used as the published static site contents for GitHub Pages. For a root-based Pages deployment, place the contents of this folder at the repository root. For a `/docs` deployment, copy the contents into `docs/` and configure Pages to publish from `/docs`.
+Upload these three files to the root of the GitHub repository that powers `ustunpasaigdir.com`.
+
+Keep your existing `CNAME` file unchanged.

@@ -3,15 +3,15 @@ const navMenu = document.getElementById("navMenu");
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
-    const isOpen = navMenu.classList.toggle("is-open");
+    const isOpen = navMenu.classList.toggle("open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  navMenu.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLAnchorElement) {
-      navMenu.classList.remove("is-open");
+  navMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
-    }
+    });
   });
 }
 
@@ -20,13 +20,18 @@ const prevSlide = document.getElementById("prevSlide");
 const nextSlide = document.getElementById("nextSlide");
 
 if (carousel && prevSlide && nextSlide) {
-  const scrollBySlide = (direction) => {
-    const firstSlide = carousel.querySelector(".project-slide");
-    const gap = parseFloat(getComputedStyle(carousel).columnGap || "0");
-    const amount = firstSlide ? firstSlide.getBoundingClientRect().width + gap : 320;
-    carousel.scrollBy({ left: direction * amount, behavior: "smooth" });
-  };
+  const slide = carousel.querySelector(".project-slide");
+  const gap = 14;
 
-  prevSlide.addEventListener("click", () => scrollBySlide(-1));
-  nextSlide.addEventListener("click", () => scrollBySlide(1));
+  function amount() {
+    return slide ? slide.getBoundingClientRect().width + gap : 320;
+  }
+
+  prevSlide.addEventListener("click", () => {
+    carousel.scrollBy({ left: -amount(), behavior: "smooth" });
+  });
+
+  nextSlide.addEventListener("click", () => {
+    carousel.scrollBy({ left: amount(), behavior: "smooth" });
+  });
 }
