@@ -6,7 +6,7 @@ Barcelona, Spain | contact@ustunpasaigdir.com | www.ustunpasaigdir.com | LinkedI
 
 ## Profile
 
-Physics graduate with 3 years of professional Datamundi experience in AI data annotation, linguistic QA, and guideline-based content review. I evaluate LLM and AI model outputs for correctness, instruction following, hallucinations, factual errors, incomplete answers, and reasoning quality.
+Physics graduate with 7 years of combined experience in translation, linguistic QA, AI data annotation, and freelance evaluation projects, including work with Datamundi, Blend, DataAnnotation, and other project-based clients. I evaluate LLM and AI model outputs for correctness, instruction following, hallucinations, factual errors, incomplete answers, and reasoning quality.
 
 My current focus is practical model-output QA for STEM / physics tasks, multilingual AI data review, and rubric-based annotation. Turkish is my native language; I work with advanced professional proficiency in English and working proficiency in Spanish. I am comfortable applying detailed guidelines, handling ambiguous outputs, and writing short reviewer notes for edge cases.
 
@@ -22,14 +22,16 @@ My current focus is practical model-output QA for STEM / physics tasks, multilin
 
 ## Relevant Experience
 
-**Datamundi — Remote**  
-AI data annotation and quality review, 3 years
+**AI Data Annotation, Linguistic QA & Freelance Evaluation Work — Remote**  
+Datamundi, Blend, DataAnnotation, and project-based clients | 2019–Present
 
-- Reviewed and annotated multilingual data according to project guidelines.
-- Checked accuracy, relevance, fluency, completeness, consistency, and instruction following.
-- Flagged vague reasoning, missing information, factual issues, unnatural wording, and guideline violations.
+- Reviewed and annotated multilingual data according to detailed project guidelines.
+- Worked on translation, linguistic QA, AI data annotation, model-output review, and quality evaluation projects.
+- Checked accuracy, relevance, fluency, completeness, consistency, instruction following, and reasoning quality.
+- Flagged vague reasoning, missing information, factual issues, unnatural wording, hallucinations, and guideline violations.
+- Applied Turkish-English-Spanish language judgment in multilingual review and AI data QA tasks.
 
-**Freelance / Project-Based LLM Evaluation Work — 2025-Present**
+**Freelance / Project-Based LLM Evaluation Work — 2025–Present**
 
 - Reviewed LLM outputs for correctness, instruction following, reasoning quality, and hallucinations.
 - Evaluated STEM and physics-style answers for numeric accuracy, assumptions, and conceptual clarity.
