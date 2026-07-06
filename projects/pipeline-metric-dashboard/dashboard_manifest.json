@@ -1,0 +1,45 @@
+{
+  "artifact_name": "metric_comparison_dashboard_v1",
+  "created_at": "2026-07-06",
+  "read_only": true,
+  "learning_db_modified": false,
+  "raw_outputs_modified": false,
+  "frozen_metric_artifacts_modified": false,
+  "model_calls_made": false,
+  "external_llm_api_calls": false,
+  "bertscore_run": false,
+  "roscoe_run": false,
+  "phase2_semantics_implemented": false,
+  "input_artifacts": [
+    "metric_comparison_findings_report_v1.zip"
+  ],
+  "row_count": 252,
+  "pass_count": 117,
+  "fail_count": 135,
+  "model_count": 8,
+  "scenario_count": 32,
+  "dashboard_files": [
+    "dashboard.html",
+    "dashboard.css",
+    "dashboard.js",
+    "dashboard_data.js",
+    "README.md",
+    "DASHBOARD_BUILD_REPORT.md",
+    "dashboard_manifest.json"
+  ],
+  "figures_referenced_or_copied": [
+    "large_numeric_failure_by_scenario_bar.png",
+    "model_metric_scores_bar.png",
+    "pass_fail_metric_distribution_boxplot.png",
+    "metric_correlation_matrix_heatmap.png",
+    "large_numeric_failure_patterns_bar.png",
+    "metric_pass_fail_gap_bar.png",
+    "tolerance_rescue_summary_bar.png",
+    "failed_numeric_relative_error_bins_bar.png",
+    "large_numeric_failure_by_model_bar.png",
+    "numeric_relative_error_bins_bar.png",
+    "model_pass_rate_bar.png",
+    "model_fail_count_bar.png",
+    "metric_correlation_with_pass_bar.png"
+  ]
+}
